@@ -1,4 +1,4 @@
-package org.example.ecommerce;
+package org.example.smartTune;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

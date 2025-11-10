@@ -1,4 +1,4 @@
-package org.example.ecommerce;
+package org.example.smartTune;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

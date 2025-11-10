@@ -1,7 +1,8 @@
-package org.example.ecommerce.entities;
+package org.example.smartTune.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
+
 import java.time.LocalDate;
 
 @Entity
@@ -18,7 +19,7 @@ public class User {
     private String nom;
     private String prenom;
 
-    @Column(unique = true)
+    @Column(unique = true, nullable = false)
     private String email;
 
     private String numTel;
@@ -28,12 +29,14 @@ public class User {
 
     private Integer age;
 
+    @Column(nullable = false)
     private String password;
 
     private LocalDate dateInscription = LocalDate.now();
 
     @Enumerated(EnumType.STRING)
-    private Role role; // STANDARD, ARTIST, ADMIN
+    @Column(nullable = false)
+    private Role role = Role.USER;
 
-    private boolean isActive; // TRUE pour standard / admin, FALSE pour artiste en attente
+    private boolean isActive = true;
 }
